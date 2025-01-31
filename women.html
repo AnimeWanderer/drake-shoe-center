@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drake Shoe Center - Men's Shoes</title>
+  <style>
+    /* Document-Level CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      line-height: 1.6;
+    }
+
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo h1 {
+      color: #fff;
+      margin: 0;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      color: #ff6347;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+    }
+
+    /* Men's Shoes Section */
+    .men-shoes {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .men-shoes h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .product-grid {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .product-card {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1rem;
+      width: 250px;
+      text-align: center;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .product-card h3 {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+
+    .product-card p {
+      font-size: 1rem;
+      color: #333;
+      margin: 0.5rem 0;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 0.5rem 0;
+    }
+
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: #ff6347;
+    }
+
+    /* Responsive Design for Phones */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+      }
+
+      .logo {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #444;
+        padding: 1rem 0;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        text-align: center;
+        padding: 0.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">
+      <h1>Drake Shoe Center</h1>
+    </div>
+    <button class="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Men's Shoes Section -->
+  <section class="men-shoes">
+    <h2>Men's Shoes</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="men-shoe1.jpg" alt="Men's Shoe 1">
+        <h3>Classic Sneakers</h3>
+        <p>$99.99</p>
+      </div>
+      <div class="product-card">
+        <img src="men-shoe2.jpg" alt="Men's Shoe 2">
+        <h3>Running Shoes</h3>
+        <p>$129.99</p>
+      </div>
+      <div class="product-card">
+        <img src="men-shoe3.jpg" alt="Men's Shoe 3">
+        <h3>Casual Loafers</h3>
+        <p>$79.99</p>
+      </div>
+      <div class="product-card">
+        <img src="men-shoe4.jpg" alt="Men's Shoe 4">
+        <h3>Formal Oxfords</h3>
+        <p>$149.99</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Drake Shoe Center. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms of Service</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    // JavaScript for Hamburger Menu
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
